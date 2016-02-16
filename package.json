@@ -1,0 +1,23 @@
+{
+  "name": "unit-11sb-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodesmithLLC/unit-11SB-express.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodesmithLLC/unit-11SB-express/issues"
+  },
+  "homepage": "https://github.com/CodesmithLLC/unit-11SB-express#readme",
+  "dependencies": {
+    "bower": "^1.7.7",
+    "lodash": "^4.4.0"
+  }
+}
