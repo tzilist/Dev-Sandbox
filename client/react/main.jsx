@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import List from './list.jsx';
+import $ from 'jquery';
 
 class App extends React.Component {
   constructor() {
     super();
     this.addItem = this.addItem.bind(this);
-    // this.updateWeekBackwards = this.updateWeekBackwards.bind(this);
-    this.state = { modules: ['Hello','Test'] };
+    this.submitMods = this.submitMods.bind(this);
+    this.state = { modules: [] };
   }
 
   addItem() {
@@ -17,6 +18,14 @@ class App extends React.Component {
     input.value = '';
     mods.push(itemAdd);
     this.setState({modules: mods})
+  }
+
+  submitMods() {
+    let url = './sandbox?';
+    for(let j in this.state.modules) {
+      url += `mod[]=${this.state.modules[j]}&`
+    }
+    window.location.href = url;
   }
 
   render() {
@@ -39,10 +48,22 @@ class App extends React.Component {
           </ul>
         </div>
 
-        <button className="load" value="Load">Load</button>
+        <button className="load" value="Load" onClick={this.submitMods}>Load</button>
+        <div id="finished"></div>
       </div>
     );
   }
 };
 
-ReactDOM.render(<App/>, document.getElementById('content'));
+class Console extends React.Component {
+  render() {
+    return (
+      <div>Test</div>
+    )
+  }
+}
+if(document.getElementById('content')) {
+  ReactDOM.render(<App/>, document.getElementById('content'));
+} else {
+  ReactDOM.render(<Console/>, document.getElementById('console'));
+}

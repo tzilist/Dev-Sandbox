@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "node server/server.js",
     "webpack": "webpack-dev-server --content-base build --inline --hot"
   },
   "repository": {

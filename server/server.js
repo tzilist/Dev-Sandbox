@@ -8,7 +8,7 @@ var exec = require('child_process').exec, child;
 
 app.get('/sandbox', function(req, res, next) {
   fs.copy(path.join(__dirname, './../client/template.html'), path.join(__dirname, './../client/rendered.html'), function(err) {
-      child = exec('bower install async --save', function(error, stdout, stderr) {
+      child = exec(`bower install ${req.query.mod.join(' ')} --save`, function(error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
 
@@ -31,7 +31,7 @@ app.get('/sandbox', function(req, res, next) {
           };
           res.status(200).sendFile(path.join(__dirname + './../client/rendered.html'), options, function() {
             fs.remove(path.join(__dirname, './../client/rendered.html'), function(err) {
-              child = exec('bower uninstall jquery --save', function(error, stdout, stderr) {
+              child = exec(`bower uninstall ${req.query.mod.join(' ')} --save`, function(error, stdout, stderr) {
 
                 console.log('stdout: ' + stdout);
                 console.log('stderr: ' + stderr);
@@ -40,15 +40,10 @@ app.get('/sandbox', function(req, res, next) {
                 }
               });
             });
-
-
           });
         });
       });
     });
-
-
-
 });
 
 

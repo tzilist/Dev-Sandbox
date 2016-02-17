@@ -6,8 +6,6 @@
   "homepage": "https://github.com/tzilist/Dev-Sandbox",
   "moduleType": [],
   "dependencies": {
-    "grunt": "^0.4.5",
-    "lodash": "^4.4.0",
-    "async": "^1.5.2"
+    "grunt": "^0.4.5"
   }
 }
