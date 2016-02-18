@@ -1,0 +1,97 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+.welcome-banner {
+  background-color: rgb(36, 138, 232);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.welcome-banner hr {
+  margin-bottom: 0;
+}
+.welcome-banner h1 {
+  text-align: center;
+  color: #fff;
+  margin-top: 0;
+}
+.welcome-banner h2 {
+  text-align: center;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  font-size: 20px;
+  display: block;
+  color: rgb(36, 138, 232);
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-left: 30px;
+}
+img {
+  margin-left: 30px;
+}
+.bot {
+  float: left;
+  width: 50%;
+  bottom: 0px;
+  height: 730px;
+  background: rgb(41, 40, 41);
+  color: white;
+}
+.bot hr {
+  margin-top: 0;
+}
+.bot h3 {
+  text-align: center;
+  margin: 0 0 20px;
+}
+hr {
+  width: 100%;
+  border: 1px solid #99B8FF;
+}
+p {
+  margin-left: 30px;
+}
+.test-area {
+  float: left;
+  width: 50%;
+}
+#console {
+  margin-left: 10%;
+}
+.input-con {
+  width: 40%;
+  height: 640px;
+  resize: none;
+  float: left;
+  font-size: 20px;
+}
+#log {
+  float: left;
+  width: 40%;
+  height: 200px;
+  margin-left: 10%;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  overflow-y: auto;
+  margin-top: 0;
+}
+#log h4{
+  text-decoration: underline;
+  text-align: center;
+  margin: 0;
+}

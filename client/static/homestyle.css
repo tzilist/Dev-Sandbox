@@ -1,0 +1,102 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: rgb(41, 40, 41);
+}
+.banner {
+  background-color: rgb(36, 138, 232);
+  padding: 30px 0 20px 0;
+  margin-bottom: 30px;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  margin-top: 0;
+}
+h2 {
+  text-align: center;
+  color: #fff;
+}
+li {
+  list-style: none;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+button {
+  cursor: pointer;
+  font-size: 20px;
+  display: block;
+  color: white;
+  background-color: rgb(36, 138, 232);
+  border: none;
+  border-radius: 3px;
+  width: 100px;
+  height: 40px;
+}
+button:hover {
+  color: rgb(36, 138, 232);
+  background-color: white;
+}
+#add {
+  display: inline;
+  margin: 0 0 0 70px;
+}
+.add-mods {
+  width: 470px;
+  display: block;
+  margin: 0 auto;
+}
+input {
+  display: inline;
+  box-sizing: border-box;
+  color: rgb(125, 125, 125);
+  font-size: 15px;
+  width: 300px;
+  height: 40px;
+  padding: 5px 5px 5px 10px;
+  border-radius: 3px;
+  border: 1px solid rgb(149, 149, 149);
+  outline: none;
+}
+.lists {
+  width: 470px;
+  margin: 30px auto;
+}
+ul {
+  margin-top: 30px;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+li {
+  text-align: center;
+  font-size: 30px;
+}
+.load {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 200px;
+  left: 48%;
+}
+img {
+  height: 150px;
+  width: 200px;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 40%;
+  left: 44%;
+}
+img {
+  opacity: 1;
+  -moz-transition: opacity 2s;
+  /* Firefox 4 */
+  -webkit-transition: opacity 2s;
+  /* Safari and Chrome */
+  -o-transition: opacity 2s;
+  transition: opacity 2s;
+}
+​
