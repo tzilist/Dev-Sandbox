@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const List= props => {
+const List = props => {
     return (
       <li>{props.module}</li>
     );

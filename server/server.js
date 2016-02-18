@@ -5,7 +5,6 @@ var fs = require('fs-extra');
 var exec = require('child_process').exec, child;
 
 
-
 app.get('/sandbox', function(req, res, next) {
   fs.copy(path.join(__dirname, './../client/template.html'), path.join(__dirname, './../client/rendered.html'), function(err) {
       child = exec(`bower install ${req.query.mod.join(' ')} --save`, function(error, stdout, stderr) {
