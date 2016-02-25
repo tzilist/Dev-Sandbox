@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Dev Sandbox</title>
+  <link rel="stylesheet" href="/static/sandboxstyle.css">
+</head>
+
+<body>
+  <div class="welcome-banner">
+    <h1>Welcome to the sandbox</h1>
+    <h2>Use the console to manipulate this HTML page or try your loaded modules</h2>
+    <a href='./'><button type="button" name="home">Home </button></a>
+  </div>
+  <div class="test-area">
+    <p>Headers</p>
+    <div class="headers">
+      <h1 id='h1'>h1</h1>
+      <h2 id='h2'>h2</h2>
+      <h3 id='h3'>h3</h3>
+      <h4 id='h4'>h4</h4>
+      <h5 id='h5'>h5</h5>
+      <h6 id='h6'>h6</h6>
+    </div>
+    <p>Unordered List</p>
+    <div class="ul">
+      <ul id='ul'>
+        <li class='li'>1</li>
+        <li class='li'>2</li>
+        <li class='li'>3</li>
+      </ul>
+    </div>
+    <p>Ordered List</p>
+    <div class="ol">
+      <ol id='ol'>
+        <li class='li'>One</li>
+        <li class='li'>Two</li>
+        <li class='li'>Three</li>
+      </ol>
+    </div>
+    <p>Images</p>
+    <div class="img">
+      <img id='red' src="./static/red.png" alt="red" />
+      <img id='blue' src="./static/blue.png" alt="blue" />
+      <img id='green' src="./static/green.png" alt="green" />
+    </div>
+  </div>
+
+<div class="bot">
+  <hr>
+  <h3>Enter your code here. Submit by pressing <i>shift + enter</i></h3>
+  <div id="console"></div>
+</div>
+  <script type="text/javascript" src="/build/bundle.js">
+
+  </script>
+  <!-- bower:js -->
+  <!-- endbower -->
+</body>
+
+</html>
