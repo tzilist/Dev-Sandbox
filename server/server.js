@@ -55,6 +55,6 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 
 
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
 
 module.exports = app;
