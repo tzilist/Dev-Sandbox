@@ -6,7 +6,7 @@ var exec = require('child_process').exec, child;
 
 
 app.get('/sandbox', function(req, res, next) {
-  fs.copy(path.join(__dirname, './../client/template.html'), path.join(__dirname, './../client/rendered.html'), function(err) {
+  fs.copy(path.join(__dirname, '../client/template.html'), path.join(__dirname, '../client/rendered.html'), function(err) {
       child = exec(`bower install ${req.query.mod.join(' ')} --save`, function(error, stdout, stderr) {
         console.log('stdout: ' + stdout);
         console.log('stderr: ' + stderr);
@@ -28,8 +28,8 @@ app.get('/sandbox', function(req, res, next) {
               'charset': 'UTF-8'
             }
           };
-          res.status(200).sendFile(path.join(__dirname + './../client/rendered.html'), options, function() {
-            fs.remove(path.join(__dirname, './../client/rendered.html'), function(err) {
+          res.status(200).sendFile(path.join(__dirname + '../client/rendered.html'), options, function() {
+            fs.remove(path.join(__dirname, '../client/rendered.html'), function(err) {
               child = exec(`bower uninstall ${req.query.mod.join(' ')} --save`, function(error, stdout, stderr) {
 
                 console.log('stdout: ' + stdout);
@@ -47,7 +47,7 @@ app.get('/sandbox', function(req, res, next) {
 
 
 app.get('/', function(req, res, next) {
-  res.sendFile(path.join(__dirname, './../client/index.html'));
+  res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
 app.use(express.static(path.join(__dirname, '../client')));
