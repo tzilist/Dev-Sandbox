@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "gulp",
-    "start": "node server/server.js",
+    "start": "nodejs server/server.js",
     "webpack": "webpack-dev-server --content-base build --inline --hot"
   },
   "repository": {
