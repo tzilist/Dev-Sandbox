@@ -60,6 +60,6 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 8080 || 8081 || 3000);
 
 module.exports = app;
