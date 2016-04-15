@@ -1,8 +1,8 @@
-var express = require('express');
-var app = express();
-var path = require('path');
-var fs = require('fs-extra');
-var exec = require('child_process').exec, child;
+const express = require('express');
+const app = express();
+const path = require('path');
+const fs = require('fs-extra');
+const exec = require('child_process').exec, child;
 
 
 app.get('/sandbox', function(req, res, next) {
