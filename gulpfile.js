@@ -1,11 +1,11 @@
-var gulp = require('gulp');
-var browserify = require('browserify');
-var babelify = require('babelify');
-var source = require('vinyl-source-stream');
-var notify = require('gulp-notify');
+const gulp = require('gulp');
+const browserify = require('browserify');
+const babelify = require('babelify');
+const source = require('vinyl-source-stream');
+const notify = require('gulp-notify');
 
 function handleErrors() {
-  var args = Array.prototype.slice.call(arguments);
+  const args = Array.prototype.slice.call(arguments);
   notify.onError({
     title : 'Compile Error',
     message : '<%= error.message %>'
@@ -15,7 +15,7 @@ function handleErrors() {
 }
 
 function buildScript(file, watch) {
-  var props = {
+  const props = {
     entries : ['./client/react/' + file],
     debug : true,
     transform : babelify.configure({
@@ -24,7 +24,7 @@ function buildScript(file, watch) {
   };
 
   //watchify if watch set to true. otherwise browserify once
-  var bundler = browserify(props);
+  const bundler = browserify(props);
 
   function rebundle(){
     var stream = bundler.bundle();
@@ -35,7 +35,7 @@ function buildScript(file, watch) {
   }
 
   bundler.on('update', function() {
-    var updateStart = Date.now();
+    const updateStart = Date.now();
     rebundle();
     console.log('Updated!', (Date.now() - updateStart) + 'ms');
   });

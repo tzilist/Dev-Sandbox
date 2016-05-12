@@ -1,8 +1,11 @@
+'use strict';
+
 const express = require('express');
 const app = express();
 const path = require('path');
 const fs = require('fs-extra');
-const exec = require('child_process').exec, child;
+const exec = require('child_process').exec;
+let child;
 
 
 app.get('/sandbox', function(req, res, next) {

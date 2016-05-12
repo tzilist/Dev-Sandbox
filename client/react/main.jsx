@@ -23,8 +23,7 @@ class App extends React.Component {
   }
 
   submitMods() {
-    if (this.state.modules === []) {
-
+    if (!this.state.modules.length) {
       return;
     }
     let url = './sandbox?';
@@ -78,14 +77,16 @@ class App extends React.Component {
 
         <div className="add-mods">
           <input className='input-mods' id="input" placeholder="Input some modules..."></input>
+        </div>
+        <div className="button-container">
           <button id="add" className="submit-module" value="Submit" onClick={this.addItem}>Add</button>
+          <button id="load" value="Load" onClick={this.submitMods}>Load</button>
         </div>
         <div className="lists">
           <ul>
             {list}
           </ul>
         </div>
-        <button className="load" value="Load" onClick={this.submitMods}>Load</button>
         <div id="finished"></div>
       </div>
     );

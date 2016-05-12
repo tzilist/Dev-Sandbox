@@ -32,6 +32,7 @@ button {
   display: block;
   color: white;
   background-color: rgb(36, 138, 232);
+  margin: 15px auto;
   border: none;
   border-radius: 3px;
   width: 100px;
@@ -41,17 +42,14 @@ button:hover {
   color: rgb(36, 138, 232);
   background-color: white;
 }
-#add {
-  display: inline;
-  margin: 0 0 0 70px;
-}
 .add-mods {
   width: 470px;
   display: block;
   margin: 0 auto;
 }
 input {
-  display: inline;
+  display: block;
+  margin: 0 auto;
   box-sizing: border-box;
   color: rgb(125, 125, 125);
   font-size: 15px;
@@ -64,7 +62,8 @@ input {
 }
 .lists {
   width: 470px;
-  margin: 30px auto;
+  margin: 80px auto 0;
+  margin
 }
 ul {
   margin-top: 30px;
@@ -76,11 +75,20 @@ li {
   text-align: center;
   font-size: 30px;
 }
-.load {
-  position: absolute;
+#add {
+  float: left;
+}
+#load {
+  float: right;
+  background-color: #E82424;
+}
+#load:hover{
+  background-color: #FFF;
+  color: #E82424;
+}
+.button-container {
+  width: 300px;
   margin: 0 auto;
-  bottom: 200px;
-  left: 48%;
 }
 img {
   height: 150px;
